@@ -36,6 +36,8 @@ public class problem0108 {
 	public static void main(String[] args) {
 		problem0108 T = new problem0108();
 		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		System.out.println(T.solution(str));
 
 	}
 
