@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-public class bj2744 {
+public class BJ2744 {
 	public String solution(String str){
 		String answer = "";
 		for(char x : str.toCharArray()){
@@ -17,7 +17,7 @@ public class bj2744 {
 	}
 
 	public static void main(String[] args) {
-		bj2744 T = new bj2744();
+		BJ2744 T = new BJ2744();
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 		System.out.println(T.solution(str));

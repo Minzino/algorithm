@@ -11,7 +11,7 @@ https://www.acmicpc.net/problem/10699
 서울의 오늘 날짜를 "YYYY-MM-DD" 형식으로 출력한다.
  */
 
-public class bj10699 {
+public class BJ10699 {
 
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.now();

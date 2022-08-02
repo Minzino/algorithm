@@ -17,7 +17,7 @@ import java.util.Scanner;
 출력
 첫 번째 줄에 팰린드롬인지의 결과를 YES 또는 NO로 출력합니다.
  */
-public class problem0108 {
+public class Problem0108 {
 
 	public String solution(String s) {
 		String answer = "NO";
@@ -34,7 +34,7 @@ public class problem0108 {
 
 
 	public static void main(String[] args) {
-		problem0108 T = new problem0108();
+		Problem0108 T = new Problem0108();
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		System.out.println(T.solution(str));

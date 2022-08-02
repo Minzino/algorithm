@@ -2,7 +2,7 @@ package String;
 
 import java.util.Scanner;
 
-public class problem0101 {
+public class Problem0101 {
 
 	public int solution(String str, char t) {
 		int answer = 0;
@@ -19,7 +19,7 @@ public class problem0101 {
 	}
 
 	public static void main(String[] args) {
-		problem0101 T = new problem0101();
+		Problem0101 T = new Problem0101();
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 		char c = sc.next().charAt(0);

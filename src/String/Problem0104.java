@@ -3,7 +3,7 @@ package String;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class problem0104 {
+public class Problem0104 {
 
 	public ArrayList<String> solution(int n, String[] str) {
 		ArrayList<String> answer = new ArrayList<>();
@@ -25,7 +25,7 @@ public class problem0104 {
 	}
 
 	public static void main(String[] args) {
-		problem0104 T = new problem0104();
+		Problem0104 T = new Problem0104();
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		String[] str = new String[n];

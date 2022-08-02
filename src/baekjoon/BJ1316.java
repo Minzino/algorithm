@@ -18,7 +18,7 @@ kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aa
 
 import java.util.Scanner;
 
-public class bj1316 {
+public class BJ1316 {
 
 	public int solution(int testCase, String[] strArray) {
 		int answer = 0;
@@ -42,7 +42,7 @@ public class bj1316 {
 	}
 
 	public static void main(String[] args) {
-		bj1316 T = new bj1316();
+		BJ1316 T = new BJ1316();
 		Scanner sc = new Scanner(System.in);
 		int testCase = sc.nextInt();
 
