@@ -18,9 +18,8 @@ public class problem0111 {
 					cnt = 1;
 				}
 			}
-			return answer;
 		}
-		return "";
+		return answer;
 	}
 
 
