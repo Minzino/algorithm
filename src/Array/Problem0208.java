@@ -8,8 +8,8 @@ public class Problem0208 {
 		int[] answer = new int[students];
 		for (int i = 0; i < students; i++) {
 			int cnt = 1;
-			for (int j = 0; j < scores.length; j++) {
-				if (scores[j] > scores[i]) {
+			for (int score : scores) {
+				if (score > scores[i]) {
 					cnt++;
 				}
 			}
