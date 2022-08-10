@@ -1,7 +1,7 @@
 package Array;
 
 import java.util.*;
-class Main {
+class Problem0209 {
 	public int solution(int n, int[][] arr){
 		int answer=-2147000000;
 		int sum1;
@@ -26,7 +26,7 @@ class Main {
 	}
 
 	public static void main(String[] args){
-		Main T = new Main();
+		Problem0209 T = new Problem0209();
 		Scanner kb = new Scanner(System.in);
 		int n=kb.nextInt();
 		int[][] arr=new int[n][n];
