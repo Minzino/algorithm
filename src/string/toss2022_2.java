@@ -1,4 +1,4 @@
-package String;
+package string;
 
 /*
 적당히 어려운 문제

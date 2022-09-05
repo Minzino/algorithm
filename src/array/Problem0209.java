@@ -1,30 +1,32 @@
-package Array;
+package array;
 
 import java.util.*;
-class Problem0210 {
-	int[] dx={-1, 0, 1, 0};
-	int[] dy={0, 1, 0, -1};
+class Problem0209 {
 	public int solution(int n, int[][] arr){
-		int answer=0;
+		int answer=-2147000000;
+		int sum1;
+		int sum2;
 		for(int i=0; i<n; i++){
+			sum1=sum2=0;
 			for(int j=0; j<n; j++){
-				boolean flag=true;
-				for(int k=0; k<4; k++){
-					int nx=i+dx[k];
-					int ny=j+dy[k];
-					if(nx>=0 && nx<n && ny>=0 && ny<n && arr[nx][ny]>=arr[i][j]){
-						flag=false;
-						break;
-					}
-				}
-				if(flag) answer++;
+				sum1+=arr[i][j];
+				sum2+=arr[j][i];
 			}
+			answer=Math.max(answer, sum1);
+			answer=Math.max(answer, sum2);
 		}
+		sum1=sum2=0;
+		for(int i=0; i<n; i++){
+			sum1+=arr[i][i];
+			sum2+=arr[i][n-i-1];
+		}
+		answer=Math.max(answer, sum1);
+		answer=Math.max(answer, sum2);
 		return answer;
 	}
 
 	public static void main(String[] args){
-		Problem0210 T = new Problem0210();
+		Problem0209 T = new Problem0209();
 		Scanner kb = new Scanner(System.in);
 		int n=kb.nextInt();
 		int[][] arr=new int[n][n];
