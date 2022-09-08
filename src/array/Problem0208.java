@@ -14,7 +14,6 @@ public class Problem0208 {
 				}
 			}
 			answer[i] = cnt;
-
 		}
 		return answer;
 	}
