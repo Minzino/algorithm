@@ -1,4 +1,4 @@
-package string;
+package inflean.string;
 
 import java.util.Scanner;
 

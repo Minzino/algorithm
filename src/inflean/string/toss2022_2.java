@@ -1,4 +1,4 @@
-package string;
+package inflean.string;
 
 /*
 적당히 어려운 문제

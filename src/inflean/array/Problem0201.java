@@ -1,4 +1,4 @@
-package array;
+package inflean.array;
 
 import java.util.ArrayList;
 import java.util.Scanner;
