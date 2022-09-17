@@ -8,6 +8,7 @@ public class Problem0303 {
 		int tmp = 0;
 		int p1 = 0;
 		int p2 = continuous;
+
 		for (int j = 0; j < continuous; j++) {
 			tmp += sales[j];
 		}
