@@ -43,6 +43,10 @@ public class Problem0503 {
 		int move = sc.nextInt();
 		int[] moves = new int[move];
 
+		for (int i = 0; i < move; i++) {
+			moves[i] = sc.nextInt();
+		}
+
 		System.out.println(t.solution(board, moves));
 
 	}
