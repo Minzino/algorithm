@@ -13,8 +13,8 @@ public class Problem0506 {
 			queue.offer(i + 1);
 		}
 
-		for (int i = 0; i < n-1; i++) {
-			for (int j = 0; j < k-1; j++) {
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = 0; j < k - 1; j++) {
 				queue.offer(queue.poll());
 			}
 			queue.poll();
