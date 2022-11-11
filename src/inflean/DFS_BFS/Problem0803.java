@@ -5,7 +5,6 @@ import java.util.*;
 public class Problem0803 {
 
     static int answer = Integer.MIN_VALUE, n, m;
-경
 
     public void DFS(int L, int sum, int time, int[] ps, int[] pt) {
         if (time > m) {
