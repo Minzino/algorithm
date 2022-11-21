@@ -152,3 +152,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.xml
+.idea
+*.iml
