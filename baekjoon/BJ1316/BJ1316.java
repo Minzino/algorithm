@@ -1,4 +1,4 @@
-package baekjoon;
+package BJ1316;
 
 /*
 https://www.acmicpc.net/problem/1316
