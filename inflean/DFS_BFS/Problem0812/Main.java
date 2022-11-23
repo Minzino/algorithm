@@ -36,21 +36,21 @@ class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        m = kb.nextInt();
-        n = kb.nextInt();
+        Main t = new Main();
+        Scanner sc = new Scanner(System.in);
+        m = sc.nextInt();
+        n = sc.nextInt();
         board = new int[n][m];
         dis = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                board[i][j] = kb.nextInt();
+                board[i][j] = sc.nextInt();
                 if (board[i][j] == 1) {
                     Q.offer(new Point(i, j));
                 }
             }
         }
-        T.BFS();
+        t.BFS();
         boolean flag = true;
         int answer = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
