@@ -1,8 +1,8 @@
-package inflean.sort;
+package sort.Problem0603;
 
 import java.util.Scanner;
 
-public class Problem0603 {
+public class Main {
 
 	public int[] solution(int n, int[] arr) {
 		for (int i = 1; i < n; i++) {
@@ -21,7 +21,7 @@ public class Problem0603 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Problem0603 t = new Problem0603();
+		Main t = new Main();
 
 		int number = sc.nextInt();
 		int[] arr = new int[number];

@@ -11,7 +11,7 @@ class Node {
 	}
 }
 
-public class Problem0709 {
+public class Main {
 
 	Node root;
 
@@ -24,7 +24,7 @@ public class Problem0709 {
 	}
 
 	public static void main(String args[]) {
-		Problem0709 tree = new Problem0709();
+		Main tree = new Main();
 		tree.root = new Node(1);
 		tree.root.lt = new Node(2);
 		tree.root.rt = new Node(3);

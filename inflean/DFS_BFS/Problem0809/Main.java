@@ -2,7 +2,7 @@ package DFS_BFS.Problem0809;
 
 import java.util.*;
 
-class Main {
+public class Main {
 
     static int[] combi;
     static int n, m;

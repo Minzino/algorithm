@@ -1,6 +1,6 @@
 package Recursive_Tree_Graph.Problem0703;
 
-class Problem0703 {
+class Main {
 
 	public int DFS(int n) {
 		if (n == 1) {
@@ -11,7 +11,7 @@ class Problem0703 {
 	}
 
 	public static void main(String[] args) {
-		Problem0703 t = new Problem0703();
+		Main t = new Main();
 		System.out.println(t.DFS(5));
 	}
 }

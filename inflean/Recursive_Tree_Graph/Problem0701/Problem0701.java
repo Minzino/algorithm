@@ -1,6 +1,6 @@
 package Recursive_Tree_Graph.Problem0701;
 
-public class Problem0701 {
+public class Main {
 
 	public void DFS(int n) {
 		if (n == 0) {

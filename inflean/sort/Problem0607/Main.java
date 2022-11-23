@@ -1,4 +1,4 @@
-package inflean.sort;
+package sort.Problem0607;
 
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ class Point implements Comparable<Point> {
 	}
 }
 
-public class Problem0607 {
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

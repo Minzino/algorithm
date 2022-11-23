@@ -1,7 +1,7 @@
 package Recursive_Tree_Graph.Problem0704;
 
 
-class Problem0704 {
+class Main {
 
 	static int[] fibo;
 
@@ -19,7 +19,7 @@ class Problem0704 {
 	}
 
 	public static void main(String[] args) {
-		Problem0704 t = new Problem0704();
+		Main t = new Main();
 		int n = 45;
 		fibo = new int[n + 1];
 		t.DFS(n);

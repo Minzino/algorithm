@@ -1,9 +1,9 @@
-package inflean.sort;
+package sort.Problem0606;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Problem0606 {
+public class Main {
 
 	public String solution(int number, int[] numberArr) {
 		int[] tmp = numberArr.clone();
@@ -20,7 +20,7 @@ public class Problem0606 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Problem0606 t = new Problem0606();
+		Main t = new Main();
 
 		int number = sc.nextInt();
 		int[] numberArr = new int[number];

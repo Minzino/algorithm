@@ -2,7 +2,7 @@ package Recursive_Tree_Graph.Problem0708;
 
 import java.util.*;
 
-public class Problem0708 {
+public class Main {
 
 	int answer = 0;
 	int[] dis = {1, -1, 5};
@@ -35,7 +35,7 @@ public class Problem0708 {
 	}
 
 	public static void main(String[] args) {
-		Problem0708 t = new Problem0708();
+		Main t = new Main();
 		Scanner sc = new Scanner(System.in);
 		int s = sc.nextInt();
 		int e = sc.nextInt();

@@ -1,8 +1,8 @@
-package inflean.sort;
+package sort.Problem0609;
 
 import java.util.*;
 
-class Problem0609 {
+class Main {
 
 	public int count(int[] arr, int capacity) {
 		int cnt = 1, sum = 0;
@@ -34,7 +34,7 @@ class Problem0609 {
 	}
 
 	public static void main(String[] args) {
-		Problem0609 t = new Problem0609();
+		Main t = new Main();
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int m = sc.nextInt();
