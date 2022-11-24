@@ -16,7 +16,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		Problem0701 t = new Problem0701();
+		Main t = new Main();
 		t.solution(3);
 	}
 }
