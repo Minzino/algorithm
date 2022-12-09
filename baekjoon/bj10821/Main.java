@@ -1,2 +1,5 @@
-package bj10821;public class Main {
+package bj10821;
+
+public class Main {
+
 }
