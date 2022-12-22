@@ -16,20 +16,19 @@ public class Main {
 
         int testCase = Integer.parseInt(br.readLine());
 
-        int start = 0;
+        int numberCnt = 1;
 
-        // N 번 반복
         while (testCase-- > 0) {
 
-            int value = Integer.parseInt(br.readLine());
+            int peekNum = Integer.parseInt(br.readLine());
 
-            if (value > start) {
-                for (int i = start + 1; i <= value; i++) {
+            if (peekNum > numberCnt) {
+                for (int i = numberCnt; i <= peekNum; i++) {
                     stack.push(i);
                     sb.append('+').append('\n');
                 }
-                start = value;
-            } else if (stack.peek() != value) {
+                numberCnt = peekNum;
+            } else if (stack.peek() != peekNum) {
                 System.out.println("NO");
                 return;
             }
@@ -37,7 +36,6 @@ public class Main {
             sb.append('-').append('\n');
 
         }
-
         System.out.println(sb);
     }
 }
