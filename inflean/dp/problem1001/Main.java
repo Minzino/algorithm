@@ -1,4 +1,4 @@
-package dp.Problem1001;
+package dp.problem1001;
 
 import java.io.BufferedReader;
 import java.io.IOException;
