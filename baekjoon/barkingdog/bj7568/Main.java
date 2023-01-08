@@ -1,9 +1,8 @@
-package bj11651;
+package barkingdog.bj7568;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,31 +10,33 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st;
 
         int testCase = Integer.parseInt(br.readLine());
 
         int[][] arr = new int[testCase][2];
 
-        StringTokenizer st;
         for (int i = 0; i < testCase; i++) {
             st = new StringTokenizer(br.readLine());
-            arr[i][1] = Integer.parseInt(st.nextToken());
             arr[i][0] = Integer.parseInt(st.nextToken());
+            arr[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(arr, (e1, e2) -> {
-            if (e1[0] == e2[0]) {
-                return e1[1] - e2[1];
-            } else {
-                return e1[0] - e2[0];
-            }
-        });
-
-        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < testCase; i++) {
-            sb.append(arr[i][1]).append(" ").append(arr[i][0]).append('\n');
+            int rank = 1;
+
+            for (int j = 0; j < testCase; j++) {
+                if (i == j) {
+                    continue;
+                }
+                if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) {
+                    rank++;
+                }
+            }
+
+            sb.append(rank).append(' ');
         }
         System.out.println(sb);
     }
-
 }
