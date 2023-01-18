@@ -2,109 +2,68 @@ package bj7662;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Main {
-
-    static class BST {
-
+    static class node{
         int num;
-        int cnt;
-        BST left;
-        BST right;
-
-        public void put(int number) {
-            if (this.num == number) {
-                this.cnt++;
-            } else if (this.num > number) {
-                if (this.left == null) {
-                    this.left = new BST(number);
-                } else {
-                    left.put(number);
-                }
-            } else {
-                if (this.right == null) {
-                    this.right = new BST(number);
-                } else {
-                    right.put(number);
-                }
-            }
-        }
-
-        public int popmin() {
-            if (this.left == null) {
-                this.cnt--;
-                return num;
-            } else {
-                int min = this.left.popmin();
-                if (this.left.cnt == 0) {
-                    this.left = this.left.right;
-                }
-                return min;
-            }
-        }
-
-        public int popmax() {
-            if (this.right == null) {
-                this.cnt--;
-                return num;
-            } else {
-                int max = this.right.popmax();
-                if (this.right.cnt == 0) {
-                    this.right = this.right.left;
-                }
-                return max;
-            }
-        }
-
-        public BST(int num) {
+        boolean isok;
+        public node(int num, boolean isok) {
             this.num = num;
-            this.cnt = 1;
+            this.isok = isok;
         }
     }
-
     public static void main(String[] args) throws Exception {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder answer = new StringBuilder();
-        int t = Integer.parseInt(st.nextToken());
-        for (int i = 0; i < t; i++) {
+        int T = Integer.parseInt(st.nextToken());
+        for (int tc = 0; tc < T; tc++) {
             int k = Integer.parseInt(br.readLine());
-            BST bst = null;
 
-            while (k-- > 0) {
+            PriorityQueue<node> minPq = new PriorityQueue<>(
+                Comparator.comparingInt(o -> o.num));
+            PriorityQueue<node> maxPq = new PriorityQueue<>(
+                (o1, o2) -> Integer.compare(o2.num, o1.num));
+
+            while (k-- != 0) {
                 st = new StringTokenizer(br.readLine());
                 String oper = st.nextToken();
                 int num = Integer.parseInt(st.nextToken());
-                if (oper.charAt(0) == 'I') {
-                    if (bst == null) {
-                        bst = new BST(num);
-                    } else {
-                        bst.put(num);
-                    }
-                } else {
-                    if (bst == null) {
-                        continue;
-                    }
-                    if (num == 1) {
-                        bst.popmax();
-                    } else {
-                        bst.popmin();
-                    }
-                    if (bst.cnt == 0) {
-                        bst = num == 1 ? bst.left : bst.right;
-                    }
+                if(oper.charAt(0) == 'I') {
+                    node nNode = new node(num, true);
+                    minPq.add(nNode);
+                    maxPq.add(nNode);
+                }else {
+                    if(num == 1)
+                        poll(maxPq);
+                    else
+                        poll(minPq);
                 }
             }
-            if (bst == null) {
-                answer.append("EMPTY").append("\n");
-            } else {
-                int max = bst.popmax();
-                int min = bst.popmin();
-                answer.append(max).append(" ").append(min).append("\n");
+            Integer max = poll(maxPq);
+            Integer min = poll(minPq);
+            if(max == null )
+                System.out.println("EMPTY");
+            else {
+                if (min == null) {
+                    min = max;
+                }
+                System.out.println(max +" "+min);
             }
         }
+    }
 
-        System.out.print(answer);
+    static Integer poll(PriorityQueue<node> pq) {
+        while(!pq.isEmpty()) {
+            node now = pq.poll();
+            if(now.isok) {
+                now.isok = false;
+                return now.num;
+            }
+        }
+        return null;
     }
 }
