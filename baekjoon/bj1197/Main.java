@@ -68,6 +68,7 @@ public class Main {
         int answer = 0;
         Collections.sort(arr);
 
+        //크루스칼
         for (Node ob : arr) {
             int fa = find(ob.a);
             int fb = find(ob.b);
