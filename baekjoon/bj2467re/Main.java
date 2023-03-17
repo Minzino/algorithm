@@ -42,6 +42,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(arr[resultRight] + " " + arr[resultLeft]);
+        System.out.println(arr[resultLeft] + " " + arr[resultRight]);
     }
 }
