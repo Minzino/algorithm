@@ -31,9 +31,23 @@ public class Main {
             }
         }
 
-        System.out.println(bfs());
+        if (isAllTomatoes()) {
+            System.out.println(0);
+        } else {
+            System.out.println(bfs());
+        }
     }
 
+    private static boolean isAllTomatoes() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (box[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     private static int bfs() {
         Queue<Point> queue = new LinkedList<>();
         int maxDay = 0;
