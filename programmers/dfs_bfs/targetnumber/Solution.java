@@ -1,4 +1,4 @@
-package dfs_bfs;
+package dfs_bfs.targetnumber;
 
 class Solution {
     int answer = 0;
